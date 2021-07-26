@@ -1,0 +1,1277 @@
+body{
+    font-size: 16px;
+    font-family: Tahoma;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.block-loading{
+    display: flex;
+    justify-content: center;
+}
+.block-loading img{
+    animation: linear infinite loading 1s;
+}
+@keyframes loading {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container{
+    max-width: 1200px;
+    margin: 75px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.page-content{
+    padding: 30px 0;
+}
+.button{
+    background: linear-gradient(0deg, #7A1A16, #E12A24, #7A1A16);
+    color: white;
+    padding: 15px 40px;
+    width: max-content;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.page-content{
+    display: none;
+}
+
+/* -------------------------------------------------------------- */
+/* СОДЕРЖАНИЕ */
+/* 1. ГЛАВНАЯ СТРАНИЦА */
+/* 2. СТРАНИЦА СРАВНИТЕЛЬНОЙ ТАБЛИЦЫ */
+/* -------------------------------------------------------------- */
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/*                          ГЛАВНАЯ СТРАНИЦА                      */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------- */
+/*                              HEADER                             */
+/* --------------------------------------------------------------- */
+.container.header{
+    margin: 0 auto;
+}
+/*ЧЕРНАЯ ЛИНИЯ*/
+.header-line .container{
+    margin: 0 auto;
+}
+.header-line{
+    width: 100%;
+    background-color: black;
+    padding: 5px 0;
+    color: white;
+}
+.header-line-block{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.7fr;
+}
+.header-line-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 7px;
+}
+.header-line-form{
+    width: 100%;
+    position: relative;
+}
+.header-line-search{
+    background-color: #CDCDCD;
+    width: 90%;
+    padding-left: 25px;
+    height: 20px;
+}
+.search-icon{
+    top: 6px;
+    left: 6px;
+    position: absolute;
+}
+.header-line-item.language{
+    font-size: 12px;
+}
+
+/*ПОЛОСА С ЛОГОТИПОМ*/
+.header-block{
+    width: 100%;
+    padding: 40px 0 50px 0;
+    background: url(../img/header-podlozhka.jpg);
+}
+.header-block-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header-block-item.link{
+    padding: 7px;
+    transition: .2s;
+    cursor: pointer;
+}
+.header-block-item.link:hover{
+    background: linear-gradient(0deg, white, #D2D1D1, white);
+    border-bottom: 2px solid #C71111;
+    transition: .2s;
+}
+.header-block-item.link a{
+    color: #5D5D5D;
+    text-decoration: none;
+}
+.header-block-message{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    bottom: -60px;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    z-index: 2;
+}
+.header-message{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+}
+
+/*КОНТЕНТ ХЕДЕРА*/
+.container.header{
+    width: 1200px;
+}
+.header-content{
+    border-top: 2px solid #811C1B;
+    border-bottom: 2px solid #811C1B;
+    display: flex;
+    justify-content: space-between;
+}
+.header-content-img{
+    height: 400px;
+    width: 220px;
+}
+.header-content-img.right{
+    display: flex;
+    justify-content: flex-end;
+}
+.container.header-content{
+    display: flex;
+    flex-direction: column;
+}
+.header-content-block{
+    display: flex;
+}
+.header-content-block-text{
+    color: #791B1B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-content-block-text h2{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.header-content-block-text h1{
+    text-transform: uppercase;
+}
+.header-content-buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr 1fr 1fr;
+    border-radius: 5px 5px 0 0 ;
+    /*overflow: hidden;*/
+    border: 1px solid #D6BEC3;
+}
+.header-button{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px 0;
+    background: linear-gradient(0deg, #DEE0DC, white, #DEE0DC);
+    color: #1F1F1F;
+    font-weight: 700;
+    font-size: 15px;
+    transition: .1s;
+}
+.header-button:hover{
+    transition: .1s;
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+    transform: scaleY(1.3) scaleX(1.0);
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* -------------------------------------------------------------- */
+/*              1 БЛОК (О ПРОГРАММЕ)                          */
+/* -------------------------------------------------------------- */
+.container.o-programme{
+    text-align: center;
+    margin-top: 0;
+}
+.container.o-programme h2{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.o-programme-block-img{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.o-programme-preimushestva{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.o-programme-preimushestva-item{
+    width: 240px;
+    padding: 100px 10px 35px 10px;
+    border: 1px solid #B5B5B5;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #6C1515;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.o-programme-preimushestva-item>h3{
+    text-transform: uppercase;
+    color: #DB202F;
+}
+.preimushestva-item-img{
+    width: 260px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    background: linear-gradient(0deg, #7A1A16, #E12A24, #7A1A16);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.preimushestva-item-img>img{
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------- */
+/*              2 БЛОК (ЭКОНОМИЯ ДЕНЕГ И ВРЕМЕНИ)                          */
+/* -------------------------------------------------------------- */
+.block-name{
+    display: flex;
+    grid-gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.block-name span{
+    color: #D9181D;
+}
+.block-name-text{
+    max-width: 580px;
+}
+.block-economiya{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-top: 50px;
+}
+.economiya-name{
+    width: 83%;
+    position: relative;
+    padding: 20px 20px 20px 60px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.economiya-vremya{
+    display: flex;
+    flex-direction: column;
+}
+.economiya-deneg{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.economiya-name.dengi{
+    padding: 20px 60px 20px 20px;
+}
+.economiya-name-icon{
+    position: absolute;
+    top: -21px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    border: 20px solid #DC2526;
+}
+.economiya-name-icon.vremya{
+    left: -15px;
+}
+.economiya-name-icon.dengi{
+    right: -15px;
+}
+.economiya-icon-svet{
+    height: 70px;
+    width: 70px;
+    background: radial-gradient(rgba(255,255,255,0.5), transparent 70%);
+    /* background-color: black; */
+    position: absolute;
+    top: -55px;
+    left: -30px;
+}
+.economiya-content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.economiya-content.dengi{
+    border-left: 2px dotted #7B7B7B;
+    padding-left: 40px;
+}
+.economiya-content-item{
+    display: flex;
+    align-items: center;
+    grid-gap: 60px;
+    border-bottom: 1px solid #EECED3;
+    margin-right: 20px;
+    padding-right: 40px;
+    font-size: 18px;
+}
+.economiya-content-item h2{
+    font-size: 40px;
+    color: #AC100E;
+    margin: 20px 0;
+}
+.show-all-advantages{
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #9F2E26;
+}
+
+
+/* -------------------------------------------------------------- */
+/*              3 БЛОК (ЗАДАй ВОПРОСЫ)                          */
+/* -------------------------------------------------------------- */
+.block-questions{
+    padding: 40px 0;
+    background: url("../img/fon-voprosy.png") no-repeat;
+    background-size: cover;
+}
+.container.questions{
+    position: relative;
+    flex-direction: row;
+    margin: 0 auto;
+    grid-gap: 140px;
+    justify-content: flex-end;
+}
+.questions-icon{
+    position: absolute;
+    height: 140px;
+    left: 0;
+}
+.questions-text{
+    width: 45%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.questions-text h3{
+    font-size: 24px;
+    margin: 0;
+}
+.questions-button{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 15px 50px;
+    background-color: #D6181F;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    transition: .2s;
+}
+.questions-button:hover{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 15px 50px;
+    background-color: #B50000;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+    transition: .2s;
+}
+.questions-button-white{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+/* -------------------------------------------------------------- */
+/*              4 БЛОК (Функции программы)                          */
+/* -------------------------------------------------------------- */
+.block-functions{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin: 30px 0;
+}
+.functions-item{
+    display: flex;
+}
+.fuctions-item-img{
+    padding: 15px;
+    border: 2px dotted #8E8E8E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fuctions-item-img>div{
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.functions-item-text{
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    border: 2px solid #8E8E8E;
+    border-left: none;
+    justify-content: space-between;
+}
+.functions-item-text h3, .functions-item-text p{
+    margin: 5px 10px 5px 10px;
+}
+.functions-item-text span{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.functions-item-text h3{
+    color: #B32024;
+}
+.functions-item-text p{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.functions-item-text p span{
+    font-weight: 100;
+}
+.functions-dostup-pro{
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+    color: white;
+    /* font-weight: 500; */
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+
+/* -------------------------------------------------------------- */
+/*              5 БЛОК (Описание программ)                        */
+/* -------------------------------------------------------------- */
+.versions--block{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 30px 0;
+}
+.versions--block-choice{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    width: 100%;
+    grid-gap: 20px;
+    font-size: 15px;
+}
+.versions--block-choice h3{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.versions--block-choice span{
+    cursor: pointer;
+}
+.choice-active{
+    color: #EF4E52;
+}
+.choice-active:before{
+    content: '>';
+    margin-right: 10px;
+}
+.versions--block-descript.MINI, .versions--block-descript.STANDART, .versions--block-descript.PRO{
+    display: none;
+}
+.versions--block-descript-content{
+    display: flex;
+    grid-gap: 60px;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+}
+.versions--block-descript-img{
+    padding: 0 15px;
+    border: 3px solid #E00024;
+    border-radius: 10px;
+}
+.versions-block-descript-text{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 20px 10px;
+    grid-gap: 30px;
+}
+.versions-block-descript-text h3{
+    margin: 0;
+}
+.versions-block-descript-text>span{
+    font-size: 14px;
+}
+.descript-text-set{
+    display: flex;
+}
+.descript-text-set span{
+    color: #EF4B51;
+    font-weight: 600;
+}
+.descript-text-set ul{
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.descript-text-button{
+    margin: 0 auto;
+}
+.versions--block-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.versions--block-buttons-item{
+    width: 30%;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+
+/* -------------------------------------------------------------- */
+/*              6 БЛОК (Кому что подходит)                        */
+/* -------------------------------------------------------------- */
+.forWhom--block{
+    display: flex;
+    grid-gap: 20px;
+}
+.forWhom--block-item{
+    display: flex;
+    grid-gap: 20px;
+    /* padding: 5px 0; */
+    border: 1px dotted;
+    border-radius: 10px;
+}
+.forWhom--block-item-img{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, #7A1A16, #E12A24, #7A1A16);
+    padding: 0 7px;
+    border-radius: 10px;
+    justify-content: center;
+    grid-gap: 10px;
+}
+.forWhom--block-item-img span{
+
+}
+.forWhom--block-item-text{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    padding: 10px 0;
+}
+.forWhom--block-item-text h3{
+    margin: 0;
+    font-size: 14px;
+    color: #983230;
+}
+.forWhom--block-item-text span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.forWhom--block-videoBtn{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    grid-gap: 60px;
+    text-transform: uppercase;
+    color: #484848;
+}
+.forWhom--block-videoBtn-btn{
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------------------------- */
+/*                    7 БЛОК (Подписаться)                        */
+/* -------------------------------------------------------------- */
+.subscription--block{
+    background: url(../img/fon-podpiskamail.png);
+    background-size: cover;
+    padding: 5px 0;
+}
+.container.subscription{
+    margin: 60px auto;
+    max-width: 900px;
+    color: white;
+    grid-gap: 40px;
+    padding-left: 140px;
+}
+.container.subscription h2{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 40px;
+    /* text-align: left; */
+    font-weight: 500;
+    width: 100%;
+}
+.container.subscription form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.subscription-input-text{
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 240px;
+    font-size: 24px;
+    height: max-content;
+    outline: none;
+    color: white;
+}
+.subscription-input-text::placeholder{
+    color: white;
+}
+.subscription-input-submit{
+    background: linear-gradient(180deg, #F60008, #9F0106);
+    padding: 15px 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    border: 5px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------- */
+/*                    8 БЛОК (Контактная информация)              */
+/* -------------------------------------------------------------- */
+.container.contactInfo{
+    margin: 35px auto;
+}
+.contactInfo--block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1.8fr;
+    grid-column-gap: 25px;
+}
+.contactInfo--block-item{
+    background: linear-gradient(0deg, #ECEAEB, #FFFFFF, #ECEAEB);
+    border-radius: 10px;
+    box-shadow: 1px 0px 8px rgb(0 0 0 / 30%);
+    padding: 35px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactInfo-item-name{
+    color: #9F120F;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.contactInfo--block-item.contacts{
+    justify-content: space-between;
+}
+.contactInfo-item-contacts{
+    display: flex;
+    grid-gap: 30px;
+    flex-direction: column;
+    width: 80%;
+    margin-top: -30px;
+}
+.contactInfo-item-contacts-item{
+    display: flex;
+    grid-gap: 15px;
+    font-size: 13px;
+}
+.contactInfo-item-map{
+
+}
+.contactInfo-item-updates{
+
+}
+.contactInfo-item-updates-item{
+    font-size: 13px;
+    border-bottom: 1px solid #9E9E9E;
+    margin-bottom: 15px;
+    padding-bottom: 7px;
+}
+.contactInfo-item-updates-item span{
+    color: #AA3231;
+    font-weight: 600;
+}
+.feedbackForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+}
+.feedbackForm input{
+    width: 98%;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.feedbackForm input[type="textarea"]{
+    height: 150px;
+}
+.feedbackForm-line{
+    display: flex;
+    justify-content: space-between;
+}
+.feedbackForm-line>div{
+    display: flex;
+    /* width: 200px; */
+    flex-direction: column;
+}
+.feedbackForm-line input{
+    width: 200px;
+}
+.formSubmit{
+    text-transform: uppercase;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(90deg, #7A1A16, #E12A24, #7A1A16);
+}
+
+
+/* -------------------------------------------------------------- */
+/*                           FOOTER                               */
+/* -------------------------------------------------------------- */
+footer{
+    background-color: #333333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    grid-gap: 30px;
+    color: white;
+    font-size: 14px;
+}
+footer a{
+    color: #D61919;
+}
+
+
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/*                    СТРАНИЦА СРАВНИТЕЛЬНО ТАБЛИЦ                */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+/* -------------------------------------------------------------- */
+.table--category{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #CDCDCD;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.table--category-name{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #7D1B1A, #C11B1B, #7D1B1A);
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.table--category-versions{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    padding: 60px 30px;
+}
+.category-versions-name{
+    display: flex;
+    color: #7F1B1B;
+    align-items: center;
+}
+.category-versions-name h3{
+
+}
+.category-versions-block{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-gap: 60px; */
+    justify-content: space-around;
+}
+.category-versions-block-item{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #7F1B1B;
+}
+.versions-block-item-name{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    background: linear-gradient(0deg, #7D1B1A, #C11B1B, #7D1B1A);
+    color: white;
+    font-size: 13px;
+}
+
+.table--category-criteria{
+    padding: 5px 5px 60px 5px;
+    border-bottom: 4px solid #881C1C;
+}
+.category-criteria-row{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    border-bottom: 2px dotted #C1C1C1;
+    /* padding-bottom: 5px; */
+    padding: 0 30px 5px 30px;
+    margin-top: 20px;
+}
+.category-criteria-row-name{
+    margin: 0 40px 0 0;
+    border: 1px solid #E1E1E1;
+    border-radius: 15px;
+    height: max-content;
+    display: flex;
+    line-height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #656364;
+    overflow: hidden;
+    position: relative;
+    /* display: flex; */
+    justify-content: flex-end;
+}
+.category-criteria-row-name>div{
+    background: linear-gradient(0deg, #7D1B1C, #C11B1B, #7D1B1C);
+    border-radius: 50%;
+    padding: 15px;
+    padding-left: 30px;
+    position: absolute;
+    top: -11px;
+    left: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+}
+.category-criteria-row-name>span{
+    width: 71%;
+    /* margin-right: 20px; */
+    text-align: center;
+}
+.category-criteria-row-versions{
+    display: flex;
+    justify-content: space-around;
+}
+.criteria-row-versions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #565455;
+    font-weight: 600;
+}
+.criteria-row-versions>span{
+
+}
+
+
+/* -------------------------------------------- */
+/*              Узнать цены                     */
+/* -------------------------------------------- */
+.getPriceList--name{
+    background: url(../img/fon-getpricelist.png);
+    width: 80%;
+    /* padding: 30px 0; */
+    height: 97px;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: white;
+    text-transform: uppercase;
+}
+.getPriceList--form{
+    display: flex;
+    margin: 20px 0 70px;
+    justify-content: center;
+    grid-gap: 30px;
+    align-items: flex-end;
+}
+.getPriceList--form div{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.getPriceList--form p{
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: max-content;
+    color: #A01A15;
+}
+.getPriceList--form input[type="text"]{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+.getPriceList--form input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+.getPriceList--form input[type="submit"]:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.3);
+    top: 0;
+    left: 0;
+}
+.button-zerkalo{
+    padding: 10px 25px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    background: linear-gradient(90deg, #AA1C1B, #C11B1B, #AA1C1B);
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.button-zerkalo:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.3);
+    top: 0;
+    left: 0;
+}
+.getPriceList--block-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.block-buttons-item.button-zerkalo{
+    width: 25%;
+    text-align: center;
+    background: linear-gradient(90deg, #5E5556, #807070);
+    padding: 15px;
+    text-decoration: none;
+}
+.block-buttons-item.button-zerkalo:hover{
+    background: linear-gradient(90deg, #AA1C1B, #C11B1B, #AA1C1B);
+}
+
+
+/* -------------------------------------------------- */
+/*                  Описание программ                 */
+/* -------------------------------------------------- */
+.container.name-page-descript, .container.table{
+    margin-top: 40px;
+    margin-bottom: 50px
+}
+.container.name-page-descript>span{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.table--category-buttons{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, #7A1A16, #E12A24, #7A1A16);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 2px;
+}
+.category-buttons-item{
+    padding: 10px 30px;
+}
+.category-buttons-item.active{
+    color: #DE2923;
+    background-color: white;
+}
+.descript-content{
+    display: none;
+}
+.descript-content.web{
+    display: block;
+}
+.descript-content-text{
+    display: flex;
+    padding: 30px 60px;
+    grid-gap: 90px;
+}
+.descript-content-text-img{
+
+}
+.descript-content-text-text{
+    font-size: 15px;
+}
+.descript-content-text-text h3{
+    text-transform: uppercase;
+    color: #ED1C24;
+}
+.descript-content-catefory-item{
+    margin-bottom: 60px;
+}
+.content-catefory-item-name{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #A31C1C;
+}
+.block-functions.descript{
+    width: auto;
+    padding: 0 50px;
+}
+.block-functions.descript .functions-item{
+    font-size: 14px;
+}
+.block-functions.descript .functions-item-text {
+    justify-content: flex-start;
+    grid-gap: 10px;
+}
+.functions-item-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 5px;
+}
+.functions-item-block>a{
+    text-decoration: none;
+    color: #AA3939;
+    font-weight: 600;
+}
+.descript-content-catefory-item.dop-advantages .block-functions.descript{
+    grid-template-columns: 1fr;
+}
+
+
+/* -------------------------------------------------- */
+/*             Временная шкала страница               */
+/* -------------------------------------------------- */
+.scale--line{
+    /*height: 300px;*/
+    border: 2px dotted #B5140A;
+    padding: 5px 5px 70px;
+    border-radius: 5px;
+}
+.scale--line-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.scale--line-item.red{
+
+}
+.scale--line-item-content{
+    position: absolute;
+    font-size: 14px;
+    background: linear-gradient(90deg, #8E1E19, #DC2923, #8E1E19);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scale--line-item-content-whitecircle{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.line-item-date{
+    position: absolute;
+    right: 40px;
+    color: #B0231C;
+}
+.line-item-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.line-item-content-circle{
+    position: absolute;
+}
+.line-item-content-line{
+    position: absolute;
+    background: url(../img/icon-strelka.png) no-repeat;
+    width: 30px;
+    height: 40px;
+    left: 20px;
+    bottom: 25px;
+}
+.line-item-content-text-block{
+    position: absolute;
+    left: 34px;
+    bottom: 58px;
+    width: 350px;
+    background: linear-gradient(0deg, #7D1B1C, #E02423);
+    color: white;
+    padding: 0 0 7px 7px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.scale--line-item.white{
+    margin-top: 160px;
+}
+.white .line-item-date{
+    left: 40px;
+}
+.white .line-item-content{
+
+}
+.white .scale--line-item-content-whitecircle{
+    width: 10px;
+    height: 10px;
+    border: 7px solid white;
+}
+.white .line-item-content-circle{
+    position: absolute;
+    font-size: 14px;
+    background: linear-gradient(90deg, #8E1E19, #DC2923, #8E1E19);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 47px;
+    bottom: 76px;
+    z-index: 2;
+}
+.white .line-item-content-line{
+    background: none;
+    background-color: #96201B;
+    width: 2px;
+    height: 80px;
+    left: auto;
+    right: 23px;
+    bottom: 14px;
+    transform: rotate(-45deg);
+}
+.white .line-item-content-text-block{
+    left: AUTO;
+    right: 34px;
+    padding: 10px;
+    bottom: 90px;
+    border: 1px solid #F7DBD9;
+    background: linear-gradient(0deg, #F0F0F0, WHITE);
+    color: black;
+}
+.white .line-item-content-circle .scale--line-item-content-whitecircle{
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.scale--line-item.white-icon{
+
+}
+.white-icon .scale--line-item-content{
+    height: 48px;
+    width: 48px;
+}
+.white-icon .scale--line-item-content-whitecircle{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.white-icon .line-item-date{
+    right: 60px;
+}
+.white-icon .line-item-content{
+    width: 350px;
+    background: linear-gradient(0deg, #8E1E19, #DC2923, #8E1E19);
+    padding: 0 10px 0 10px;
+    color: #951F1F;
+    border-radius: 30px;
+    z-index: -1;
+}
+.item-content-textarea{
+    padding: 6px 10px 6px 50px;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid #E2E2E2;
+}
